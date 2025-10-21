@@ -5,44 +5,129 @@ Template Name: Contact TMPL
 get_header(); ?>
 
  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <div class="row g-4 align-items-stretch">
-        
-        <!-- Contact Form -->
-        <div class="col-lg-6">
-          <div class="contact-card h-100">
-            <h2 class="mb-4 fw-bold">Get in Touch</h2>
-            <div id="contactForm">
-             <?php echo do_shortcode('[contact-form-7 id="1b68848" title="Contact form"]'); ?>
-
+<section class="hero-section">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <h4>Start a Conversation</h4>
+                <p> If you’d like to work with ELMA, please share a few details below.  We’ll    review your message and respond 
+                    within 2–3 business days to discuss next steps or schedule a discovery call<p>
             </div>
-          </div>
-        </div>
 
-        <!-- Google Map -->
-        <div class="col-lg-6">
-          <!-- <div class="h-100 contact-card p-0 overflow-hidden">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086695526259!2d-122.42067918468157!3d37.774929779759404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a0639e4f1%3A0x93c3e3c5d4e6c1c!2sSan%20Francisco!5e0!3m2!1sen!2sus!4v1697212345678"
-              allowfullscreen=""
-              loading="lazy">
-            </iframe>
-          </div> -->
-          <?php
-            $google_map_iframe = get_field('map_iframe_url');
+            <div class="row g-0 align-items-stretch">
+                <div class="col-lg-12 d-flex flex-column bg-white p-4">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Your Name</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="First and Last" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+                            </div>
 
-            if ($google_map_iframe): ?>
-            <div class="h-100 contact-card p-0 overflow-hidden">
-                <?php echo $google_map_iframe; ?>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"> Organization / Affiliation</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Optional" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your best contact email" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"> Phone Number*</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your best contact phone number" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 mb-5">
+                            <p>Type of Inquiry* (Select One) </p>
+                            <div class="col-md-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Strategic Communications or Branding Project
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                     Speaking Engagement
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                     General Collaboration
+                                </label>
+                            </div>
+                            <div class="col-md-5">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                     Training or Workshop
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                     Media / Interview Request
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 mb-5">
+                            <p>Tell Us About Your Project or Event*</p>
+                            <p> (What would you like to achieve? Please include key goals, audience, and timeline.)</p>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2"> Text field – up to 500 words</label>
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-5">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="datepicker">Preferred Start Date or Event Date</label>
+                                    <input type="text" id="datepicker">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label"> How Did You Hear About ELMA? <br>Referral, social media, news, event, etc</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1"> I consent to ELMA using my information for the purpose of responding to this inquiry</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        
+                    </form>
+                </div>
             </div>
-            <?php endif; ?>
 
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
 
 <?php
 get_footer();?>

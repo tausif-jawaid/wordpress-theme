@@ -112,6 +112,17 @@ function elma_scripts() {
         '1.0', 
         true  // Load in footer to improve page load time
     );
+
+
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0');
+    wp_enqueue_script('jquery');
+    
+    // Enqueue jQuery UI from CDN
+    wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.13.2/jquery-ui.js', array('jquery'), '1.13.2');
+    
+    // Enqueue jQuery UI CSS from CDN
+    wp_enqueue_style('jquery-ui-css', 'https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css');
 }
 
 add_action('wp_enqueue_scripts', 'elma_scripts');

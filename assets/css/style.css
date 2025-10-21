@@ -624,3 +624,11 @@
 /* blog template css end */
 
 
+/* Date Picker css end */
+
+#datepicker {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+/* Date picker css end */

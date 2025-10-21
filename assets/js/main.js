@@ -292,3 +292,20 @@ jQuery(document).ready(function($) {
 });
 
 
+// Date picker initialization
+$(function() {
+    // Initialize datepicker
+    $("#datepicker").datepicker({
+        dateFormat: 'yy-mm-dd', // Format of the date
+        minDate: 0, // Minimum selectable date (0 means today)
+        maxDate: '+1m +1w', // Maximum selectable date (1 month and 1 week from now)
+        showButtonPanel: true, // Show button panel
+        changeMonth: true, // Allow month selection
+        changeYear: true, // Allow year selection
+        yearRange: '2020:2030' // Range of years in dropdown
+    });
+
+    // Optional: Add animation
+    $("#datepicker").datepicker("option", "showAnim", "slideDown");
+});
+
