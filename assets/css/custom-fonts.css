@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'FS_Joey-Regular';
+    src: url('../fonts/FS_Joey-Regular.otf') format('opentype'),
+         url('../fonts/FS_Joey-Regular.woff2') format('woff2'),
+         url('../fonts/FS_Joey-Regular.woff') format('woff');
+         
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'FS_Joey-Bold';
+  src: url('../fonts/FS_Joey-Bold.otf') format('opentype'),
+       url('../fonts/FS_Joey-Bold.woff2') format('woff2'),
+       url('../fonts/FS_Joey-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Default font for everything */
+body, p, span, li, a, input, textarea {
+  font-family: 'FS_Joey-Regular', sans-serif !important;
+}
+
+/* Headings use bold version */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'FS_Joey-Bold', sans-serif !important;
+}

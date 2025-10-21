@@ -1,0 +1,626 @@
+ :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f5f5f5;
+            --accent-color: #d4af37;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--primary-color);
+            line-height: 1.6;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .hero-section {
+            /* background-color: var(--secondary-color); */
+            padding: 8rem 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .highlight-text {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 0.75rem 2rem;
+            border-radius: 0;
+        }
+
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.75rem 2rem;
+            border-radius: 0;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .featured-work-card {
+            border: none;
+            border-radius: 0;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-work-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .process-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .founder-section {
+            background-color: var(--secondary-color);
+            padding: 6rem 0;
+        }
+
+        .founder-quote {
+            font-size: 1.25rem;
+            font-style: italic;
+            margin: 2rem 0;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1.5rem;
+        }
+
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            margin-top: 3rem;
+        }
+
+        .newsletter-form {
+            max-width: 400px;
+        }
+
+        .newsletter-form input {
+            border-radius: 0;
+            border: 1px solid white;
+            background: transparent;
+            color: white;
+            padding: 0.75rem;
+        }
+
+        .newsletter-form input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .newsletter-form button {
+            border-radius: 0;
+            background: white;
+            color: var(--primary-color);
+            border: 1px solid white;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .brand-highlight {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 6rem 0 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+
+            .logo-strip {
+            overflow: hidden;
+            background: #fff;
+            padding: 30px 0;
+            }
+            .logo-track {
+            display: flex;
+            gap: 80px; /* space between logos */
+            animation: scroll 25s linear infinite;
+            }
+            .logo-track img {
+            max-height: 80px;
+            width: auto;
+            filter: grayscale(100%);
+            transition: all 0.3s ease;
+            }
+            .logo-track img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+            }
+
+            /* Infinite scroll animation */
+            @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+            }
+
+            /* Responsive tweaks */
+            @media (max-width:768px){
+            .logo-track { gap: 40px; }
+            .logo-track img { max-height: 60px; }
+            }
+
+            .carousel-item img {
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            }
+            .carousel-item img:hover {
+            transform: scale(1.05);
+            }
+
+
+
+
+
+/* 19-10-25 */
+.notes-from-noor-section {
+  position: relative;
+  background: #fff url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+  padding: 80px 0;
+}
+
+.notes-from-noor-section .container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-header .icon {
+  width: 28px;
+  height: 14px;
+  background: #0b5563;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b5563;
+  background: rgba(11,85,99,0.1);
+  display: inline-block;
+  padding: 4px 8px;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  color: #4b5563;
+  font-size: 15px;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.notes-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.note-box {
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  min-height: 120px;
+  transition: all 0.3s ease;
+}
+
+.note-box:hover {
+  background: #e9e9e9;
+}
+
+.note-box p {
+  font-size: 14px;
+  color: #0b5563;
+  margin: 0;
+}
+
+.note-box .arrow {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  color: #0b5563;
+  font-size: 20px;
+}
+
+.notes-right .noor-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  .notes-right {
+    order: -1;
+  }
+  .section-title {
+    font-size: 26px;
+  }
+  .notes-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+/* --- Carousel Container --- */
+.custom-carousel-container-v2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Slides --- */
+.carousel-slide-v2 {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* --- Arrows --- */
+.carousel-btn-v2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(1, 71, 83, 0.9);
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn-v2:hover {
+  background-color: #014753;
+  box-shadow: 0 4px 10px rgba(1, 71, 83, 0.3);
+}
+
+.carousel-btn-prev-v2 {
+  left: 20px;
+}
+
+.carousel-btn-next-v2 {
+  right: 20px;
+}
+
+/* --- Indicators --- */
+.carousel-indicators-custom-v2 {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}
+
+.indicator-v2 {
+  width: 12px;
+  height: 12px;
+  background-color: #d6d6d6;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.indicator-v2.active,
+.indicator-v2:hover {
+  background-color: #014753;
+  transform: scale(1.2);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+  .carousel-btn-v2 {
+    font-size: 1.1rem;
+    padding: 8px 10px;
+  }
+  .indicator-v2 {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+
+.links-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.links-list li {
+    margin-bottom: 10px;
+}
+
+.links-list a {
+    color: #e7ecf1;
+    text-decoration: none;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* ================================
+   Featured Work Carousel Styling
+   Theme Color: #014753
+=================================== */
+
+/* Carousel Container */
+.custom-carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Slides */
+.carousel-slide img {
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide img:hover {
+  transform: scale(1.03);
+}
+
+/* ===========================
+   Navigation Arrows
+=========================== */
+.carousel-btn {
+  background-color: rgba(1, 71, 83, 0.9);
+  color: #fff;
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-btn i {
+  font-size: 18px;
+}
+
+.carousel-btn:hover {
+  background-color: #fff;
+  color: #014753;
+  box-shadow: 0 0 8px rgba(1, 71, 83, 0.3);
+}
+
+/* Optional subtle animation */
+.carousel-btn:active {
+  transform: scale(0.9);
+}
+
+/* ===========================
+   Indicators (Dots)
+=========================== */
+.carousel-indicators-custom {
+  margin-top: 20px;
+}
+
+.carousel-indicators-custom .indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel-indicators-custom .indicator:hover {
+  background-color: #014753;
+  transform: scale(1.2);
+}
+
+.carousel-indicators-custom .indicator.active {
+  background-color: #014753;
+  width: 14px;
+  height: 14px;
+}
+
+/* Optional fade-in on section load */
+#work {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Tablet (<= 992px) */
+/* @media (max-width: 992px) {
+  .logo-slider {
+    margin-top: 30px;
+  }
+} */
+
+/* Mobile (<= 576px) */
+@media (max-width: 576px) {
+  .logo-slider {
+    margin-top: 70px;
+  }
+}
+
+.footer {
+        background-color: #014753;
+        color: white;
+        padding: 4rem 0 2rem;
+}
+
+
+/* Form Section Background */
+.subscribe-form {
+  background-color: #00454f; /* teal background */
+  padding: 40px 0;
+}
+
+/* Make form full width */
+.subscribe-form form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 700px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Input Field */
+.subscribe-form input[type="email"],
+.subscribe-form input[type="text"] {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 15px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-family: 'FS_Joey-Regular', sans-serif;
+  outline: none;
+}
+
+.subscribe-form input::placeholder {
+  color: #cfdede;
+}
+
+/* Button Style */
+.subscribe-form input[type="submit"],
+.subscribe-form button {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-family: 'FS_Joey-Bold', sans-serif;
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-form input[type="submit"]:hover,
+.subscribe-form button:hover {
+  background-color: #fff;
+  color: #00454f;
+}
+
+.subscribe-form form {
+  max-width: 100%;
+  width: 100%;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  width: 100%;
+}
+
+
+/* Social icon css */
+.social-icon {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/* Social icon css end */
+
+
+/* blog template css */
+.article-card {
+    transition: all 0.4s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Image Settings */
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover Effect */
+.article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.article-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* blog template css end */
+
+
