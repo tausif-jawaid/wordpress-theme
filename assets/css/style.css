@@ -448,7 +448,6 @@
 }
 
 .carousel-btn:hover {
-  background-color: #fff;
   color: #014753;
   box-shadow: 0 0 8px rgba(1, 71, 83, 0.3);
 }
@@ -517,10 +516,15 @@
         padding: 4rem 0 2rem;
 }
 
+.how-work-section {
+        background-color: #efece8;
+        padding: 2rem 0;
+    }
+
 
 /* Form Section Background */
 .subscribe-form {
-  background-color: #00454f; /* teal background */
+  background-color: #014753; /* teal background */
   padding: 40px 0;
 }
 

@@ -10,7 +10,7 @@ $how_content = get_field('how_we_work_content');
 $how_image   = get_field('how_we_work_image'); // Image field (return: array)
 ?>
 
-<section id="home" class="mt-5 how-word-section">
+<section id="home" class="mt-5 how-work-section">
     <div class="container">
         <div class="row align-items-center">
 
